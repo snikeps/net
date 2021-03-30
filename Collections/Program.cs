@@ -16,7 +16,12 @@ namespace Collections
             reader.RemoveCommaCounties(countries);
 
 
-            foreach (Country country in countries.Where(x=>!x.Name.Contains(',')).Take(20))
+            var filteredCountries = countries.Where(x => !x.Name.Contains(','));//.Take(20);
+            var filteredCpuntries2 = from country in countries
+                                     where !country.Name.Contains(',')
+                                     select country;
+
+            foreach (Country country in filteredCountries)
             {
                 Console.WriteLine($"{PopulationFormatter.FormatPopulation(country.Population).PadLeft(15)}: {country.Name}");
             }
