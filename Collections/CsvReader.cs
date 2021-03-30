@@ -15,10 +15,10 @@ namespace Collections
         }
 
         //public Dictionary<string, Country> ReadAllCountries()
-        public List<Country> ReadAllCountries()
+        public Dictionary<string, List<Country>> ReadAllCountries()
         {
             //var countries = new Dictionary<string, Country>();
-            var countries = new List<Country>();
+            var countries = new Dictionary<string, List<Country>>();
 
             using (StreamReader sr = new StreamReader(_csvFilePath))
             {
@@ -28,12 +28,18 @@ namespace Collections
                 string csvLine;
                 while ((csvLine = sr.ReadLine()) != null)
                 {
-                    Country country = (ReadCountryFromCsvLine(csvLine));
-                    //countries.Add(country.Code, country);
-                    countries.Add(country);
+                    Country country = ReadCountryFromCsvLine(csvLine);
+                    if (countries.ContainsKey(country.Region)) 
+                    {
+                        countries[country.Region].Add(country);
+                    }
+                    else
+                    {
+                        List<Country> countriesInRegion = new List<Country>() { country };
+                        countries.Add(country.Region, countriesInRegion);
+                    }
                 }
             }
-
             return countries;
         }
 

@@ -12,19 +12,20 @@ namespace Collections
 
             CsvReader reader = new CsvReader(filePath);
 
-            List<Country> countries = reader.ReadAllCountries();
-            reader.RemoveCommaCounties(countries);
+            Dictionary<string, List<Country>> countries = reader.ReadAllCountries();
+            //reader.RemoveCommaCounties(countries);
+            foreach (string region in countries.Keys)
+                Console.WriteLine(region);
 
+            Console.Write("Which of the above regions do you want? ");
+            string chosenRegion = Console.ReadLine();
 
-            var filteredCountries = countries.Where(x => !x.Name.Contains(','));//.Take(20);
-            var filteredCpuntries2 = from country in countries
-                                     where !country.Name.Contains(',')
-                                     select country;
-
-            foreach (Country country in filteredCountries)
+            if (countries.ContainsKey(chosenRegion))
             {
-                Console.WriteLine($"{PopulationFormatter.FormatPopulation(country.Population).PadLeft(15)}: {country.Name}");
+                foreach (Country country in countries[chosenRegion].Take(10))
+                    Console.WriteLine($"{PopulationFormatter.FormatPopulation(country.Population).PadLeft(15)}: {country.Name}");
             }
+
 
 
             //Country lilliput = new Country("Lilliput", "LIL", "somewhere", 2_000_000);
