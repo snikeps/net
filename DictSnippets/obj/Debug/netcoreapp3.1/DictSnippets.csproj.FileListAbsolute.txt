@@ -1,0 +1,13 @@
+C:\Users\yusupova\source\repos\DictSnippets\bin\Debug\netcoreapp3.1\DictSnippets.exe
+C:\Users\yusupova\source\repos\DictSnippets\bin\Debug\netcoreapp3.1\DictSnippets.deps.json
+C:\Users\yusupova\source\repos\DictSnippets\bin\Debug\netcoreapp3.1\DictSnippets.runtimeconfig.json
+C:\Users\yusupova\source\repos\DictSnippets\bin\Debug\netcoreapp3.1\DictSnippets.runtimeconfig.dev.json
+C:\Users\yusupova\source\repos\DictSnippets\bin\Debug\netcoreapp3.1\DictSnippets.dll
+C:\Users\yusupova\source\repos\DictSnippets\bin\Debug\netcoreapp3.1\DictSnippets.pdb
+C:\Users\yusupova\source\repos\DictSnippets\obj\Debug\netcoreapp3.1\DictSnippets.csprojAssemblyReference.cache
+C:\Users\yusupova\source\repos\DictSnippets\obj\Debug\netcoreapp3.1\DictSnippets.AssemblyInfoInputs.cache
+C:\Users\yusupova\source\repos\DictSnippets\obj\Debug\netcoreapp3.1\DictSnippets.AssemblyInfo.cs
+C:\Users\yusupova\source\repos\DictSnippets\obj\Debug\netcoreapp3.1\DictSnippets.csproj.CoreCompileInputs.cache
+C:\Users\yusupova\source\repos\DictSnippets\obj\Debug\netcoreapp3.1\DictSnippets.dll
+C:\Users\yusupova\source\repos\DictSnippets\obj\Debug\netcoreapp3.1\DictSnippets.pdb
+C:\Users\yusupova\source\repos\DictSnippets\obj\Debug\netcoreapp3.1\DictSnippets.genruntimeconfig.cache

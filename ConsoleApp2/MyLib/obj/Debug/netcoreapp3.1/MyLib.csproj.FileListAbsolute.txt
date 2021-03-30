@@ -1,0 +1,9 @@
+C:\Users\yusupova\source\repos\ConsoleApp2\MyLib\bin\Debug\netcoreapp3.1\MyLib.deps.json
+C:\Users\yusupova\source\repos\ConsoleApp2\MyLib\bin\Debug\netcoreapp3.1\MyLib.dll
+C:\Users\yusupova\source\repos\ConsoleApp2\MyLib\bin\Debug\netcoreapp3.1\MyLib.pdb
+C:\Users\yusupova\source\repos\ConsoleApp2\MyLib\obj\Debug\netcoreapp3.1\MyLib.csprojAssemblyReference.cache
+C:\Users\yusupova\source\repos\ConsoleApp2\MyLib\obj\Debug\netcoreapp3.1\MyLib.AssemblyInfoInputs.cache
+C:\Users\yusupova\source\repos\ConsoleApp2\MyLib\obj\Debug\netcoreapp3.1\MyLib.AssemblyInfo.cs
+C:\Users\yusupova\source\repos\ConsoleApp2\MyLib\obj\Debug\netcoreapp3.1\MyLib.csproj.CoreCompileInputs.cache
+C:\Users\yusupova\source\repos\ConsoleApp2\MyLib\obj\Debug\netcoreapp3.1\MyLib.dll
+C:\Users\yusupova\source\repos\ConsoleApp2\MyLib\obj\Debug\netcoreapp3.1\MyLib.pdb
