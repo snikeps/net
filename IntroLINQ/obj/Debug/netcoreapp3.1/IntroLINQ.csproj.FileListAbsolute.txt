@@ -1,0 +1,13 @@
+C:\Users\yusupova\source\repos\IntroLINQ\bin\Debug\netcoreapp3.1\IntroLINQ.exe
+C:\Users\yusupova\source\repos\IntroLINQ\bin\Debug\netcoreapp3.1\IntroLINQ.deps.json
+C:\Users\yusupova\source\repos\IntroLINQ\bin\Debug\netcoreapp3.1\IntroLINQ.runtimeconfig.json
+C:\Users\yusupova\source\repos\IntroLINQ\bin\Debug\netcoreapp3.1\IntroLINQ.runtimeconfig.dev.json
+C:\Users\yusupova\source\repos\IntroLINQ\bin\Debug\netcoreapp3.1\IntroLINQ.dll
+C:\Users\yusupova\source\repos\IntroLINQ\bin\Debug\netcoreapp3.1\IntroLINQ.pdb
+C:\Users\yusupova\source\repos\IntroLINQ\obj\Debug\netcoreapp3.1\IntroLINQ.csprojAssemblyReference.cache
+C:\Users\yusupova\source\repos\IntroLINQ\obj\Debug\netcoreapp3.1\IntroLINQ.AssemblyInfoInputs.cache
+C:\Users\yusupova\source\repos\IntroLINQ\obj\Debug\netcoreapp3.1\IntroLINQ.AssemblyInfo.cs
+C:\Users\yusupova\source\repos\IntroLINQ\obj\Debug\netcoreapp3.1\IntroLINQ.csproj.CoreCompileInputs.cache
+C:\Users\yusupova\source\repos\IntroLINQ\obj\Debug\netcoreapp3.1\IntroLINQ.dll
+C:\Users\yusupova\source\repos\IntroLINQ\obj\Debug\netcoreapp3.1\IntroLINQ.pdb
+C:\Users\yusupova\source\repos\IntroLINQ\obj\Debug\netcoreapp3.1\IntroLINQ.genruntimeconfig.cache
