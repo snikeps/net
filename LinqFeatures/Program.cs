@@ -15,9 +15,9 @@ namespace LinqFeatures
 
             Action<int> write = x => Console.WriteLine(x); // only incoming parameters (same as void)
             
-            Console.WriteLine(square(4));
-            Console.WriteLine(add(40, 11));
-            write(square(add(3, 4)));
+            //Console.WriteLine(square(4));
+            //Console.WriteLine(add(40, 11));
+            //write(square(add(3, 4)));
 
 
             IEnumerable<Employee> developers = new Employee[]
@@ -33,8 +33,16 @@ namespace LinqFeatures
                 new Employee {Id = 3 , Name = "Alex"}
             };
 
-            foreach(var employee in developers.Where(
-                        e => e.Name.StartsWith("S")))
+            var query = developers.Where(e => e.Name.Length == 5)
+                                   .OrderBy(e => e.Name)
+                                   .Select(e => e);
+
+            var query2 = from developer in developers
+                         where developer.Name.Length == 5
+                         orderby developer.Name descending
+                         select developer;
+
+            foreach(var employee in query2)
             {
                 Console.WriteLine(employee.Name);
             }
