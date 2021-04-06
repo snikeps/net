@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace IntroLINQ
 {
@@ -10,6 +11,19 @@ namespace IntroLINQ
         {
             string path = @"C:\windows";
             ShowLargeFileWithoutLinq(path);
+            Console.WriteLine("*********");
+            ShowLargeFileWithLinq(path);
+        }
+
+        private static void ShowLargeFileWithLinq(string path)
+        {
+            var query = from file in new DirectoryInfo(path).GetFiles()
+                        orderby file.Length descending
+                        select file;
+            foreach (var file in query.Take(5))
+            {
+                Console.WriteLine($"{file.Name,-20} : {file.Length,20:N0}");
+            }
         }
 
         private static void ShowLargeFileWithoutLinq(string path)
@@ -22,7 +36,7 @@ namespace IntroLINQ
             for (int i = 0; i < 5; i++)
             {
                 FileInfo file = files[i]; 
-                Console.WriteLine($"{file.Name, -20} : {file.Length, 10:N0}");
+                Console.WriteLine($"{file.Name, -20} : {file.Length, 20:N0}");
             }
         }
 

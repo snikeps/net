@@ -1,0 +1,13 @@
+C:\Users\yusupova\source\repos\LinqFeatures\bin\Debug\netcoreapp3.1\LinqFeatures.exe
+C:\Users\yusupova\source\repos\LinqFeatures\bin\Debug\netcoreapp3.1\LinqFeatures.deps.json
+C:\Users\yusupova\source\repos\LinqFeatures\bin\Debug\netcoreapp3.1\LinqFeatures.runtimeconfig.json
+C:\Users\yusupova\source\repos\LinqFeatures\bin\Debug\netcoreapp3.1\LinqFeatures.runtimeconfig.dev.json
+C:\Users\yusupova\source\repos\LinqFeatures\bin\Debug\netcoreapp3.1\LinqFeatures.dll
+C:\Users\yusupova\source\repos\LinqFeatures\bin\Debug\netcoreapp3.1\LinqFeatures.pdb
+C:\Users\yusupova\source\repos\LinqFeatures\obj\Debug\netcoreapp3.1\LinqFeatures.csprojAssemblyReference.cache
+C:\Users\yusupova\source\repos\LinqFeatures\obj\Debug\netcoreapp3.1\LinqFeatures.AssemblyInfoInputs.cache
+C:\Users\yusupova\source\repos\LinqFeatures\obj\Debug\netcoreapp3.1\LinqFeatures.AssemblyInfo.cs
+C:\Users\yusupova\source\repos\LinqFeatures\obj\Debug\netcoreapp3.1\LinqFeatures.csproj.CoreCompileInputs.cache
+C:\Users\yusupova\source\repos\LinqFeatures\obj\Debug\netcoreapp3.1\LinqFeatures.dll
+C:\Users\yusupova\source\repos\LinqFeatures\obj\Debug\netcoreapp3.1\LinqFeatures.pdb
+C:\Users\yusupova\source\repos\LinqFeatures\obj\Debug\netcoreapp3.1\LinqFeatures.genruntimeconfig.cache
