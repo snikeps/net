@@ -13,8 +13,12 @@ namespace LinqFeatures
             Func<int, int> square = x => x * x; // <int, int>  - last parameter defines return type
             Func<int, int, int> add = (x, y) => x + y;
 
+            Action<int> write = x => Console.WriteLine(x); // only incoming parameters (same as void)
+            
             Console.WriteLine(square(4));
             Console.WriteLine(add(40, 11));
+            write(square(add(3, 4)));
+
 
             IEnumerable<Employee> developers = new Employee[]
             //Employee[] developers = new Employee[]
