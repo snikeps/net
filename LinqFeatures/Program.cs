@@ -10,6 +10,12 @@ namespace LinqFeatures
     {
         static void Main(string[] args)
         {
+            Func<int, int> square = x => x * x; // <int, int>  - last parameter defines return type
+            Func<int, int, int> add = (x, y) => x + y;
+
+            Console.WriteLine(square(4));
+            Console.WriteLine(add(40, 11));
+
             IEnumerable<Employee> developers = new Employee[]
             //Employee[] developers = new Employee[]
             {
@@ -23,7 +29,8 @@ namespace LinqFeatures
                 new Employee {Id = 3 , Name = "Alex"}
             };
 
-            foreach(var employee in developers.Where(NameStartsWithS))
+            foreach(var employee in developers.Where(
+                        e => e.Name.StartsWith("S")))
             {
                 Console.WriteLine(employee.Name);
             }
