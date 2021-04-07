@@ -1,0 +1,13 @@
+C:\Users\yusupova\source\repos\Queries\bin\Debug\netcoreapp3.1\Queries.exe
+C:\Users\yusupova\source\repos\Queries\bin\Debug\netcoreapp3.1\Queries.deps.json
+C:\Users\yusupova\source\repos\Queries\bin\Debug\netcoreapp3.1\Queries.runtimeconfig.json
+C:\Users\yusupova\source\repos\Queries\bin\Debug\netcoreapp3.1\Queries.runtimeconfig.dev.json
+C:\Users\yusupova\source\repos\Queries\bin\Debug\netcoreapp3.1\Queries.dll
+C:\Users\yusupova\source\repos\Queries\bin\Debug\netcoreapp3.1\Queries.pdb
+C:\Users\yusupova\source\repos\Queries\obj\Debug\netcoreapp3.1\Queries.csprojAssemblyReference.cache
+C:\Users\yusupova\source\repos\Queries\obj\Debug\netcoreapp3.1\Queries.AssemblyInfoInputs.cache
+C:\Users\yusupova\source\repos\Queries\obj\Debug\netcoreapp3.1\Queries.AssemblyInfo.cs
+C:\Users\yusupova\source\repos\Queries\obj\Debug\netcoreapp3.1\Queries.csproj.CoreCompileInputs.cache
+C:\Users\yusupova\source\repos\Queries\obj\Debug\netcoreapp3.1\Queries.dll
+C:\Users\yusupova\source\repos\Queries\obj\Debug\netcoreapp3.1\Queries.pdb
+C:\Users\yusupova\source\repos\Queries\obj\Debug\netcoreapp3.1\Queries.genruntimeconfig.cache
