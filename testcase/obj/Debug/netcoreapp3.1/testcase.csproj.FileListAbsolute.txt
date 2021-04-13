@@ -1,0 +1,16 @@
+C:\Users\yusupova\source\repos\testcase\obj\Debug\netcoreapp3.1\testcase.csprojAssemblyReference.cache
+C:\Users\yusupova\source\repos\testcase\obj\Debug\netcoreapp3.1\testcase.AssemblyInfoInputs.cache
+C:\Users\yusupova\source\repos\testcase\obj\Debug\netcoreapp3.1\testcase.AssemblyInfo.cs
+C:\Users\yusupova\source\repos\testcase\obj\Debug\netcoreapp3.1\testcase.csproj.CoreCompileInputs.cache
+C:\Users\yusupova\source\repos\testcase\bin\Debug\netcoreapp3.1\testcase.exe
+C:\Users\yusupova\source\repos\testcase\bin\Debug\netcoreapp3.1\testcase.deps.json
+C:\Users\yusupova\source\repos\testcase\bin\Debug\netcoreapp3.1\testcase.runtimeconfig.json
+C:\Users\yusupova\source\repos\testcase\bin\Debug\netcoreapp3.1\testcase.runtimeconfig.dev.json
+C:\Users\yusupova\source\repos\testcase\bin\Debug\netcoreapp3.1\testcase.dll
+C:\Users\yusupova\source\repos\testcase\bin\Debug\netcoreapp3.1\testcase.pdb
+C:\Users\yusupova\source\repos\testcase\bin\Debug\netcoreapp3.1\ClassLibrary1.dll
+C:\Users\yusupova\source\repos\testcase\bin\Debug\netcoreapp3.1\ClassLibrary1.pdb
+C:\Users\yusupova\source\repos\testcase\obj\Debug\netcoreapp3.1\testcase.csproj.CopyComplete
+C:\Users\yusupova\source\repos\testcase\obj\Debug\netcoreapp3.1\testcase.dll
+C:\Users\yusupova\source\repos\testcase\obj\Debug\netcoreapp3.1\testcase.pdb
+C:\Users\yusupova\source\repos\testcase\obj\Debug\netcoreapp3.1\testcase.genruntimeconfig.cache
