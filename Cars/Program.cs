@@ -15,7 +15,12 @@ namespace Cars
                 from car in cars
                 where car.Manufacturer == "BMW" && car.Year == 2016
                 orderby car.Combined descending, car.Name ascending
-                select car;
+                select new
+                {
+                    car.Name,
+                    car.Manufacturer,
+                    car.Combined
+                };
 
             var top = 
                 cars
