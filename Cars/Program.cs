@@ -22,6 +22,26 @@ namespace Cars
                     car.Combined
                 };
 
+            //var result = cars.Any(c => c.Manufacturer == "Ford");
+
+            //var result = cars.Select(c =>  new { c.Manufacturer, c.Name, c.Combined});
+
+
+            var result = cars.SelectMany(c => c.Name);
+
+
+            foreach (var character in result)
+            {
+                Console.WriteLine(character);
+            }
+
+
+            //foreach (var car in result.Take(3))
+            //{
+            //    Console.WriteLine($"{car.Name} : {car.Manufacturer}");
+            //}
+
+
             var top = 
                 cars
                     .OrderByDescending(c => c.Combined)
