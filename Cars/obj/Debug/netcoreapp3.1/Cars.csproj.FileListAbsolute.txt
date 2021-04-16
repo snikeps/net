@@ -12,3 +12,4 @@ C:\Users\yusupova\source\repos\Cars\obj\Debug\netcoreapp3.1\Cars.csproj.CoreComp
 C:\Users\yusupova\source\repos\Cars\obj\Debug\netcoreapp3.1\Cars.dll
 C:\Users\yusupova\source\repos\Cars\obj\Debug\netcoreapp3.1\Cars.pdb
 C:\Users\yusupova\source\repos\Cars\obj\Debug\netcoreapp3.1\Cars.genruntimeconfig.cache
+C:\Users\yusupova\source\repos\Cars\bin\Debug\netcoreapp3.1\manufacturers.csv

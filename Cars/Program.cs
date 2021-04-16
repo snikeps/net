@@ -9,7 +9,8 @@ namespace Cars
     {
         static void Main(string[] args)
         {
-            var cars = ProcessFile("fuel.csv");
+            var cars = ProcessCars("fuel.csv");
+            var manufacturers = ProcessManufacturers("manufacturers.csv");
 
             var query =
                 from car in cars
@@ -58,7 +59,25 @@ namespace Cars
 
         }
 
-        private static List<Cars> ProcessFile(string path)
+        private static List<Manufacturer> ProcessManufacturers(string path)
+        {
+            var query =
+                File.ReadAllLines(path)
+                    .Where(l => l.Length > 1)
+                    .Select(l =>
+                    {
+                        var columns = l.Split(',');
+                        return new Manufacturer
+                        {
+                            Name = columns[0],
+                            Headquarters = columns[1],
+                            Year = int.Parse(columns[2])
+                        };
+                    });
+            return query.ToList();
+        }
+
+        private static List<Cars> ProcessCars(string path)
         {
             //return
             //    File.ReadAllLines(path)
