@@ -14,12 +14,13 @@ namespace Cars
 
             var query =
                 from car in cars
-                where car.Manufacturer == "BMW" && car.Year == 2016
+                join manufacturer in manufacturers 
+                    on car.Manufacturer equals manufacturer.Name
                 orderby car.Combined descending, car.Name ascending
                 select new
                 {
+                    manufacturer.Headquarters,
                     car.Name,
-                    car.Manufacturer,
                     car.Combined
                 };
 
@@ -28,13 +29,14 @@ namespace Cars
             //var result = cars.Select(c =>  new { c.Manufacturer, c.Name, c.Combined});
 
 
-            var result = cars.SelectMany(c => c.Name);
 
+            ////// SelectMany example
+            //var result = cars.SelectMany(c => c.Name);
 
-            foreach (var character in result)
-            {
-                Console.WriteLine(character);
-            }
+            //foreach (var character in result)
+            //{
+            //    Console.WriteLine(character);
+            //}
 
 
             //foreach (var car in result.Take(3))
@@ -43,18 +45,20 @@ namespace Cars
             //}
 
 
-            var top = 
-                cars
-                    .OrderByDescending(c => c.Combined)
-                    .ThenBy(c => c.Name)
-                    .Select(c => c)
-                    .First(c => c.Manufacturer == "BMW" && c.Year == 2016);
 
-            Console.WriteLine(top.Name);
+            ////// example of First
+            //var top = 
+            //    cars
+            //        .OrderByDescending(c => c.Combined)
+            //        .ThenBy(c => c.Name)
+            //        .Select(c => c)
+            //        .First(c => c.Manufacturer == "BMW" && c.Year == 2016);
 
-            foreach(var car in query.Take(10))
+            //Console.WriteLine(top.Name);
+
+            foreach (var car in query.Take(10))
             {
-                Console.WriteLine($"{car.Name} : {car.Combined}");
+                Console.WriteLine($"{car.Headquarters} {car.Name} : {car.Combined}");
             }
 
         }
