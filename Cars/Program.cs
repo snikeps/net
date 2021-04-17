@@ -30,17 +30,24 @@ namespace Cars
             // extension method syntax
 
             var query2 =
-                manufacturers.GroupJoin(cars, m => m.Name, c => c.Manufacturer,
-                    (m, g) =>
-                        new
+                cars.GroupBy(c => c.Manufacturer)
+                    .Select(g =>
+                   {
+                       var results = g.Aggregate(new CarStatictics(),
+                                            (acc, c) => acc.Accumulate(c),
+                                            acc => acc.Compute());
+                        return new
                         {
-                            Manufacturer = m,
-                            Cars = g
-                        })
-                .GroupBy(m => m.Manufacturer.Headquarters);
+                            Name = g.Key,
+                            Avg = results.Average,
+                            Min = results.Min,
+                            Max = results.Max
+                        };
+                    })
+                    .OrderByDescending(r=> r.Max);
 
 
-            foreach (var result in query)
+            foreach (var result in query2)
             {
                 Console.WriteLine($"{result.Name}");
                 Console.WriteLine($"\tMax = {result.Max}");
