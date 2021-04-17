@@ -12,10 +12,15 @@ namespace Cars
             var cars = ProcessCars("fuel.csv");
             var manufacturers = ProcessManufacturers("manufacturers.csv");
 
+
+            // Join with composit key
+
             var query =
                 from car in cars
                 join manufacturer in manufacturers 
-                    on car.Manufacturer equals manufacturer.Name
+                    on new { car.Manufacturer, car.Year } 
+                        equals 
+                        new { Manufacturer = manufacturer.Name, manufacturer.Year }
                 orderby car.Combined descending, car.Name ascending
                 select new
                 {
@@ -28,16 +33,16 @@ namespace Cars
 
             var query2 =
                 cars.Join(manufacturers,
-                c => c.Manufacturer,
-                m => m.Name,
-                (c, m) => new
-                {
-                    m.Headquarters,
-                    c.Name,
-                    c.Combined
-                })
-                .OrderByDescending(c => c.Combined)
-                .ThenBy(c => c.Name);
+                            c => new { c.Manufacturer, c.Year },
+                            m => new { Manufacturer = m.Name, m.Year },
+                            (c, m) => new
+                            {
+                                m.Headquarters,
+                                c.Name,
+                                c.Combined
+                            })
+                            .OrderByDescending(c => c.Combined)
+                            .ThenBy(c => c.Name);
 
             //var result = cars.Any(c => c.Manufacturer == "Ford");
 
