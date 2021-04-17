@@ -15,16 +15,17 @@ namespace Cars
             // query syntax
 
             var query =
-                from manufacturer in manufacturers
-                join car in cars on manufacturer.Name equals car.Manufacturer
-                    into carGroup
-                orderby manufacturer.Name
+                from car in cars
+                group car by car.Manufacturer into carGroup
                 select new
                 {
-                    Manufacturer = manufacturer,
-                    Cars = carGroup
+                    Name = carGroup.Key,
+                    Max = carGroup.Max(c => c.Combined),
+                    Min = carGroup.Min(c => c.Combined),
+                    Avg = carGroup.Average(c => c.Combined)
                 } into result
-                group result by result.Manufacturer.Headquarters;
+                orderby result.Max descending
+                select result;
 
             // extension method syntax
 
@@ -39,15 +40,12 @@ namespace Cars
                 .GroupBy(m => m.Manufacturer.Headquarters);
 
 
-            foreach (var group in query2)
+            foreach (var result in query)
             {
-                Console.WriteLine($"{group.Key}");
-                foreach(var car in group.SelectMany( g => g.Cars )
-                                        .OrderByDescending( c => c.Combined)
-                                        .Take(3))
-                {
-                    Console.WriteLine($"\t{car.Name} : {car.Combined}");
-                }
+                Console.WriteLine($"{result.Name}");
+                Console.WriteLine($"\tMax = {result.Max}");
+                Console.WriteLine($"\tMin = {result.Min}");
+                Console.WriteLine($"\tAvg = {result.Avg}");
             }
            
 
