@@ -11,6 +11,23 @@ namespace Cars
         static void Main(string[] args)
         {
             CreateXml();
+            QueryXml();
+        }
+
+        private static void QueryXml()
+        {
+            var document = XDocument.Load("fuel.xml");
+
+            var query =
+                from element in document.Descendants("Car")  // pulls out all matched elements in any hierarchy level
+                //from element in document.Element("Cars").Elements("Car")
+                where element.Attribute("Manufacturer")?.Value == "BMW"    // if attribute is optional "?" symbol will be required and program won't fail
+                select element.Attribute("Name").Value;
+
+            foreach(var name in query)
+            {
+                Console.WriteLine(name);
+            }
         }
 
         private static void CreateXml()
@@ -26,18 +43,6 @@ namespace Cars
                                 new XAttribute("Combined", record.Combined),
                                 new XAttribute("Manufacturer", record.Manufacturer)
                                 ));
-
-
-            //foreach (var record in records)
-            //{
-            //    var car = new XElement("Car",
-            //                    new XAttribute("Name", record.Name),
-            //                    new XAttribute("Combined", record.Combined),
-            //                    new XAttribute("Manufacturer", record.Manufacturer)
-            //                    );
-
-            //    cars.Add(car);
-            //}
 
             document.Add(cars);
             document.Save("fuel.xml");
