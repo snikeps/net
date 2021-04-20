@@ -19,14 +19,21 @@ namespace Cars
         private static void QueryData()
         {
             var db = new CarDb();
-            db.Database.Log = Console.WriteLine; // logging
+            //db.Database.Log = Console.WriteLine; // logging
+
+            //var query =
+            //    from car in db.Cars
+            //    orderby car.Combined descending, car.Name ascending
+            //    select car;
 
             var query =
-                from car in db.Cars
-                orderby car.Combined descending, car.Name ascending
-                select car;
+                db.Cars.Where(c => c.Manufacturer == "BMW")
+                        .OrderByDescending(c => c.Combined)
+                        .ThenBy(c => c.Name)
+                        .Take(10);
 
-            foreach (var car in query.Take(10))
+
+            foreach (var car in query)
             {
                 Console.WriteLine($"{car.Name} : {car.Combined}");
             }
