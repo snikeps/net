@@ -17,8 +17,9 @@ namespace Cars
             Func<int, int> square = x => x * x;
             Expression<Func<int, int, int>> add = (x, y) => x + y;
 
-            //var result = add(3, 5); // we can no longer assign in that way. We can use API "."
-            //Console.WriteLine(result);
+            //var result = add(3, 5); // we can no longer assign in that way. We can use API "." --> add.Compile()(3, 5);
+            var result = add.Compile()(3, 5);
+            Console.WriteLine(result);
             Console.WriteLine(add);
             //
 
