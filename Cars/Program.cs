@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.IO;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Xml.Linq;
 
 namespace Cars
@@ -11,9 +12,20 @@ namespace Cars
     {
         static void Main(string[] args)
         {
+            // Expression vs Func
+
+            Func<int, int> square = x => x * x;
+            Expression<Func<int, int, int>> add = (x, y) => x + y;
+
+            //var result = add(3, 5); // we can no longer assign in that way. We can use API "."
+            //Console.WriteLine(result);
+            Console.WriteLine(add);
+            //
+
+
             Database.SetInitializer(new DropCreateDatabaseIfModelChanges<CarDb>());
-            InsertData();
-            QueryData();
+            //InsertData();
+            //QueryData();
         }
 
         private static void QueryData()
