@@ -22,13 +22,26 @@ namespace Cars
             var db = new CarDb();
             db.Database.Log = Console.WriteLine; // logging
 
+            //var query =
+            //    db.Cars.GroupBy(c => c.Manufacturer)
+            //            .Select(g => new
+            //            {
+            //                Name = g.Key,
+            //                Cars = g.OrderByDescending(c => c.Combined).Take(2)
+            //            });
+
+
+            // more efficient query
             var query =
-                db.Cars.GroupBy(c => c.Manufacturer)
-                        .Select(g => new
-                        {
-                            Name = g.Key,
-                            Cars = g.OrderByDescending(c => c.Combined).Take(2)
-                        });
+                from car in db.Cars
+                group car by car.Manufacturer into manufacturer
+                select new
+                {
+                    Name = manufacturer.Key,
+                    Cars = (from car in manufacturer
+                            orderby car.Combined descending
+                            select car).Take(2)
+                };
 
             foreach (var group in query)
             {
