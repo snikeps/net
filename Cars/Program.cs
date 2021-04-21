@@ -12,43 +12,31 @@ namespace Cars
     {
         static void Main(string[] args)
         {
-            // Expression vs Func
-
-            Func<int, int> square = x => x * x;
-            Expression<Func<int, int, int>> add = (x, y) => x + y;
-
-            //var result = add(3, 5); // we can no longer assign in that way. We can use API "." --> add.Compile()(3, 5);
-            var result = add.Compile()(3, 5);
-            Console.WriteLine(result);
-            Console.WriteLine(add);
-            //
-
-
             Database.SetInitializer(new DropCreateDatabaseIfModelChanges<CarDb>());
-            //InsertData();
-            //QueryData();
+            InsertData();
+            QueryData();
         }
 
         private static void QueryData()
         {
             var db = new CarDb();
-            //db.Database.Log = Console.WriteLine; // logging
-
-            //var query =
-            //    from car in db.Cars
-            //    orderby car.Combined descending, car.Name ascending
-            //    select car;
+            db.Database.Log = Console.WriteLine; // logging
 
             var query =
-                db.Cars.Where(c => c.Manufacturer == "BMW")
-                        .OrderByDescending(c => c.Combined)
-                        .ThenBy(c => c.Name)
-                        .Take(10);
+                db.Cars.GroupBy(c => c.Manufacturer)
+                        .Select(g => new
+                        {
+                            Name = g.Key,
+                            Cars = g.OrderByDescending(c => c.Combined).Take(2)
+                        });
 
-
-            foreach (var car in query)
+            foreach (var group in query)
             {
-                Console.WriteLine($"{car.Name} : {car.Combined}");
+                Console.WriteLine(group.Name);
+                foreach (var car in group.Cars)
+                {
+                    Console.WriteLine($"\t{car.Name} : {car.Combined}");
+                }
             }
         }
 
