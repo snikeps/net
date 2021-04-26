@@ -1,0 +1,13 @@
+C:\Users\yusupova\source\repos\DelegatesAndEvents\bin\Debug\netcoreapp3.1\DelegatesAndEvents.exe
+C:\Users\yusupova\source\repos\DelegatesAndEvents\bin\Debug\netcoreapp3.1\DelegatesAndEvents.deps.json
+C:\Users\yusupova\source\repos\DelegatesAndEvents\bin\Debug\netcoreapp3.1\DelegatesAndEvents.runtimeconfig.json
+C:\Users\yusupova\source\repos\DelegatesAndEvents\bin\Debug\netcoreapp3.1\DelegatesAndEvents.runtimeconfig.dev.json
+C:\Users\yusupova\source\repos\DelegatesAndEvents\bin\Debug\netcoreapp3.1\DelegatesAndEvents.dll
+C:\Users\yusupova\source\repos\DelegatesAndEvents\bin\Debug\netcoreapp3.1\DelegatesAndEvents.pdb
+C:\Users\yusupova\source\repos\DelegatesAndEvents\obj\Debug\netcoreapp3.1\DelegatesAndEvents.csprojAssemblyReference.cache
+C:\Users\yusupova\source\repos\DelegatesAndEvents\obj\Debug\netcoreapp3.1\DelegatesAndEvents.AssemblyInfoInputs.cache
+C:\Users\yusupova\source\repos\DelegatesAndEvents\obj\Debug\netcoreapp3.1\DelegatesAndEvents.AssemblyInfo.cs
+C:\Users\yusupova\source\repos\DelegatesAndEvents\obj\Debug\netcoreapp3.1\DelegatesAndEvents.csproj.CoreCompileInputs.cache
+C:\Users\yusupova\source\repos\DelegatesAndEvents\obj\Debug\netcoreapp3.1\DelegatesAndEvents.dll
+C:\Users\yusupova\source\repos\DelegatesAndEvents\obj\Debug\netcoreapp3.1\DelegatesAndEvents.pdb
+C:\Users\yusupova\source\repos\DelegatesAndEvents\obj\Debug\netcoreapp3.1\DelegatesAndEvents.genruntimeconfig.cache
