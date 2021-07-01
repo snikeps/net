@@ -1,0 +1,13 @@
+C:\Users\yusupova\source\repos\DependencyInjection\bin\Debug\netcoreapp3.1\DependencyInjection.exe
+C:\Users\yusupova\source\repos\DependencyInjection\bin\Debug\netcoreapp3.1\DependencyInjection.deps.json
+C:\Users\yusupova\source\repos\DependencyInjection\bin\Debug\netcoreapp3.1\DependencyInjection.runtimeconfig.json
+C:\Users\yusupova\source\repos\DependencyInjection\bin\Debug\netcoreapp3.1\DependencyInjection.runtimeconfig.dev.json
+C:\Users\yusupova\source\repos\DependencyInjection\bin\Debug\netcoreapp3.1\DependencyInjection.dll
+C:\Users\yusupova\source\repos\DependencyInjection\bin\Debug\netcoreapp3.1\DependencyInjection.pdb
+C:\Users\yusupova\source\repos\DependencyInjection\obj\Debug\netcoreapp3.1\DependencyInjection.csprojAssemblyReference.cache
+C:\Users\yusupova\source\repos\DependencyInjection\obj\Debug\netcoreapp3.1\DependencyInjection.AssemblyInfoInputs.cache
+C:\Users\yusupova\source\repos\DependencyInjection\obj\Debug\netcoreapp3.1\DependencyInjection.AssemblyInfo.cs
+C:\Users\yusupova\source\repos\DependencyInjection\obj\Debug\netcoreapp3.1\DependencyInjection.csproj.CoreCompileInputs.cache
+C:\Users\yusupova\source\repos\DependencyInjection\obj\Debug\netcoreapp3.1\DependencyInjection.dll
+C:\Users\yusupova\source\repos\DependencyInjection\obj\Debug\netcoreapp3.1\DependencyInjection.pdb
+C:\Users\yusupova\source\repos\DependencyInjection\obj\Debug\netcoreapp3.1\DependencyInjection.genruntimeconfig.cache
