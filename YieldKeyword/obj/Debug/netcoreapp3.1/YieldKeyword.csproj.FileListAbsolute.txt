@@ -1,0 +1,13 @@
+C:\Users\yusupova\source\repos\YieldKeyword\bin\Debug\netcoreapp3.1\YieldKeyword.exe
+C:\Users\yusupova\source\repos\YieldKeyword\bin\Debug\netcoreapp3.1\YieldKeyword.deps.json
+C:\Users\yusupova\source\repos\YieldKeyword\bin\Debug\netcoreapp3.1\YieldKeyword.runtimeconfig.json
+C:\Users\yusupova\source\repos\YieldKeyword\bin\Debug\netcoreapp3.1\YieldKeyword.runtimeconfig.dev.json
+C:\Users\yusupova\source\repos\YieldKeyword\bin\Debug\netcoreapp3.1\YieldKeyword.dll
+C:\Users\yusupova\source\repos\YieldKeyword\bin\Debug\netcoreapp3.1\YieldKeyword.pdb
+C:\Users\yusupova\source\repos\YieldKeyword\obj\Debug\netcoreapp3.1\YieldKeyword.csprojAssemblyReference.cache
+C:\Users\yusupova\source\repos\YieldKeyword\obj\Debug\netcoreapp3.1\YieldKeyword.AssemblyInfoInputs.cache
+C:\Users\yusupova\source\repos\YieldKeyword\obj\Debug\netcoreapp3.1\YieldKeyword.AssemblyInfo.cs
+C:\Users\yusupova\source\repos\YieldKeyword\obj\Debug\netcoreapp3.1\YieldKeyword.csproj.CoreCompileInputs.cache
+C:\Users\yusupova\source\repos\YieldKeyword\obj\Debug\netcoreapp3.1\YieldKeyword.dll
+C:\Users\yusupova\source\repos\YieldKeyword\obj\Debug\netcoreapp3.1\YieldKeyword.pdb
+C:\Users\yusupova\source\repos\YieldKeyword\obj\Debug\netcoreapp3.1\YieldKeyword.genruntimeconfig.cache

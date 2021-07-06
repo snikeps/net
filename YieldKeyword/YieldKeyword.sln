@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YieldKeyword", "YieldKeyword.csproj", "{1A41DC3C-680E-4EA2-B2AE-387584272EC9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1A41DC3C-680E-4EA2-B2AE-387584272EC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A41DC3C-680E-4EA2-B2AE-387584272EC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A41DC3C-680E-4EA2-B2AE-387584272EC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A41DC3C-680E-4EA2-B2AE-387584272EC9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {825A1CE2-8E0F-4D95-91A4-4983466D83FC}
+	EndGlobalSection
+EndGlobal
