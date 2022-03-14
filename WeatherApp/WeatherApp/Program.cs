@@ -32,12 +32,12 @@ namespace WeatherApp
         {
             string message = "";
 
-            HttpResponseMessage response = await client.GetAsync(path);
+            var response = await client.GetAsync(path);
             if(response.StatusCode == HttpStatusCode.OK)
             {
                 message = await response.Content.ReadAsStringAsync();
             }
-            Weather weather = JsonConvert.DeserializeObject<Weather>(message);
+            var weather = JsonConvert.DeserializeObject<Weather>(message);
 
             return weather;
         }
@@ -45,71 +45,26 @@ namespace WeatherApp
 
         static async Task Main(string[] args)
         {
-            var obs = Measurement();
-
-            obs.Subscribe(_ => RunAsync().GetAwaiter().GetResult());
-
-            await new TaskCompletionSource<object>().Task;
+            //можно сверху вставить ещё один таймер, который будет срабатывать каждые сутки и запускать заново последовательность).
+            Observalbe.Timer(100,0)
+                .Select(async s=> await GetWeatherAsync(url))
+                .Scan(async (result,current)=>await CalculateMean(result,current))
+                .Subscribe(async k =>ShowWeather((await k).last,(await k).count,(await k).mean));             
         }
 
-        static async Task RunAsync()
+        static async  Task<(double mean, double count, Weather last,double lastSum,double lastTime)> CalculateMean(Task<(double mean, double count, Weather previous)> previousResult, Task<Weather> currentResult)
         {
-            try
-            {
-                var weather = await GetWeatherAsync(url);
-
-                var count = GetCountOfUniqueMeasures(weather);
-
-                var meanHumidity = GetMeanHumididty();
-
-                ShowWeather(weather, count, meanHumidity);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-        }
-
-        private static int GetCountOfUniqueMeasures(Weather weather)
-        {
-            weatherRecords.Add(weather);
-
-            return weatherRecords
-                        .Select(x => DateTime.Parse(x.Current.Last_updated) > DateTime.Today)
-                        .Distinct()
-                        .Count();
-        }
-
-        private static double GetMeanHumididty()
-        {
-            var sumOfHumidity =  weatherRecords
-                                    .Select(x => x.Current)
-                                    .Where(x => DateTime.Parse(x.Last_updated) > DateTime.Now.AddHours(-6))
-                                    .Sum(x => x.Humidity);
-
-            var countOfHumidity = weatherRecords
-                                    .Select(x => x.Current)
-                                    .Where(x => DateTime.Parse(x.Last_updated) > DateTime.Now.AddHours(-6))
-                                    .Count();
-
-            return sumOfHumidity / countOfHumidity;
+            var (mean,count,previous,lastSum,lastTime) = await previousResult;
+            var current = await currentResult;
+            var elapsedFromPrevious = current.Current.Last_updated - previous.Current.Last_updated;
+            var currentWeightedMean = elapsedFromPrevious * (current.Current.Humidity + previous.Current.Humidity) / 2;
+            return ((currentWeightedMean + lastSum)/(lastTime + elapsedFromPrevious),
+                     count+1,
+                     current,
+                     (currentWeightedMean + lastSum),
+                     (lastTime + elapsedFromPrevious));
         }
 
 
-        static IObservable<long> Measurement()
-        {
-            return Observable.Create<long>(
-                (obs, cancel) =>
-                {
-                    return Task.Run(() =>
-                    {
-                        while (!cancel.IsCancellationRequested)
-                        {
-                            Thread.Sleep(10 * 1000);
-                            obs.OnNext(100);
-                        }
-                    });
-                });
-        }
     }
 }
