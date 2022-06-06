@@ -1,6 +1,4 @@
 ﻿using System;
-//using System.Linq;
-//using NUnit.Framework;
 
 namespace ConsoleApp
 {
@@ -8,51 +6,22 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine($"MCMXC = {RomanDecode.Solution("MCMXC")}");
-            Console.WriteLine($"MMVIII = {RomanDecode.Solution("MMVIII")}");
-            Console.WriteLine($"MDCLXVI = {RomanDecode.Solution("MDCLXVI")}");
+            Console.WriteLine($"Rgb(255, 255, 255) = {Kata.Rgb(255, 255, 255)}");
+            Console.WriteLine($"Rgb(255, 255, 300) = {Kata.Rgb(255, 255, 300)}");
+            Console.WriteLine($"Rgb(0,0,0) = {Kata.Rgb(0, 0, 0)}");
+            Console.WriteLine($"Rgb(148, 0, 211) = {Kata.Rgb(148, 1, 211)}");
         }
 
     }
-    public class RomanDecode
+    public class Kata
     {
-        public static int Solution(string roman)
+        public static string Rgb(int r, int g, int b)
         {
-            int res = 0;
+            r = Math.Max(Math.Min(r, 255), 0);
+            g = Math.Max(Math.Min(g, 255), 0);
+            b = Math.Max(Math.Min(b, 255), 0);
 
-            for (int i = 0; i < roman.Length; i++)
-            {
-                if (i < roman.Length - 1)
-                {
-                    if (Nums(roman[i]) < Nums(roman[i + 1]))
-                    {
-                        res += Nums(roman[i + 1]) - Nums(roman[i]);
-                        i++;
-                    }
-                    else
-                    {
-                        res += Nums(roman[i]);
-                    }
-                }
-                else
-                {
-                    res += Nums(roman[i]);
-                }
-            }
-
-            return res;
+            return string.Concat(r.ToString("X2"), g.ToString("X2"), b.ToString("X2"));
         }
-
-        public static int Nums(char c) => c switch
-        {
-            'I' => 1,
-            'V' => 5,
-            'X' => 10,
-            'L' => 50,
-            'C' => 100,
-            'D' => 500,
-            'M' => 1000,
-            _ => throw new NotImplementedException()
-        };
     }
 }
