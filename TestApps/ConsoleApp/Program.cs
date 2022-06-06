@@ -30,7 +30,7 @@ namespace ConsoleApp
             Func<DateTime, DateTime, DateTime> minOfInterval = (last, current) => last.AddSeconds(interval) > current ? last : current;
             var minInterval = source.Scan(minOfInterval).DistinctUntilChanged();
 
-            (DateTime) intervalCheck((DateTime) last, (DateTime) current) => last.AddSeconds(interval) > current ? last : current;
+            //(DateTime) intervalCheck((DateTime) last, (DateTime) current) => last.AddSeconds(interval) > current ? last : current;
 
             //Console.WriteLine($"Comparer: {comparer.Compare(5, 5)}");
 
