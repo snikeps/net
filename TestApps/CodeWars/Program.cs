@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace ConsoleApp
 {
@@ -6,22 +7,19 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine($"Rgb(255, 255, 255) = {Kata.Rgb(255, 255, 255)}");
-            Console.WriteLine($"Rgb(255, 255, 300) = {Kata.Rgb(255, 255, 300)}");
-            Console.WriteLine($"Rgb(0,0,0) = {Kata.Rgb(0, 0, 0)}");
-            Console.WriteLine($"Rgb(148, 0, 211) = {Kata.Rgb(148, 1, 211)}");
+            Console.WriteLine(Kata.IsPangram("The quick brown fox jumps over the lazy dog."));
+            Console.WriteLine(Kata.IsPangram("The quick bron fox jumps over the lazy dog."));
         }
 
     }
-    public class Kata
+    public static class Kata
     {
-        public static string Rgb(int r, int g, int b)
+        public static bool IsPangram(string str)
         {
-            r = Math.Max(Math.Min(r, 255), 0);
-            g = Math.Max(Math.Min(g, 255), 0);
-            b = Math.Max(Math.Min(b, 255), 0);
+            if (str.ToLower().Where(l => l >= 'a' && l <= 'z').Distinct().Count() == 26)
+                return true;
 
-            return string.Concat(r.ToString("X2"), g.ToString("X2"), b.ToString("X2"));
+            return false;
         }
     }
 }
