@@ -7,19 +7,32 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(Kata.IsPangram("The quick brown fox jumps over the lazy dog."));
-            Console.WriteLine(Kata.IsPangram("The quick bron fox jumps over the lazy dog."));
+            Console.WriteLine($"true - {Scramblies.Scramble("rkqodlw", "world")}");
+            Console.WriteLine($"true - {Scramblies.Scramble("cedewaraaossoqqyt", "codewars")}");
+            Console.WriteLine($"false - {Scramblies.Scramble("katas", "steak")}");
+            Console.WriteLine($"false - {Scramblies.Scramble("scriptjavx", "javascript")}");
+            Console.WriteLine($"true - {Scramblies.Scramble("aabbcamaomsccdd", "commas")}");
         }
 
     }
-    public static class Kata
-    {
-        public static bool IsPangram(string str)
-        {
-            if (str.ToLower().Where(l => l >= 'a' && l <= 'z').Distinct().Count() == 26)
-                return true;
 
-            return false;
+    public class Scramblies
+    {
+        public static bool Scramble(string str1, string str2)
+        {
+            var letStat = str2.GroupBy(x => x).Select(x => new
+            {
+                letter = x.Key,
+                count = x.Count()
+            });
+
+            foreach (var l in str2)
+            {
+                if (!str1.Contains(l) || str1.Where(x => x == l).Count() < letStat.Where(x => x.letter == l).First().count)
+                    return false;
+            }
+
+            return true;
         }
     }
 }
