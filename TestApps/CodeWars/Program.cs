@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace ConsoleApp
@@ -8,20 +7,35 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            var inputArray = new List<string> { "crazer", "carer", "racar", "caers", "racer" };
-            foreach (string arg in Kata.Anagrams("racer", inputArray))
-            {
-                Console.WriteLine(arg);
-            }
+            Console.WriteLine($"true: {Parentheses.ValidParentheses("()")}");
+            Console.WriteLine($"false: {Parentheses.ValidParentheses(")(()))")}");
+            Console.WriteLine($"false: {Parentheses.ValidParentheses("(")}");
+            Console.WriteLine($"true: {Parentheses.ValidParentheses("()")}");
+            Console.WriteLine($"true: {Parentheses.ValidParentheses("(())((()())())")}");
         }
 
     }
 
-    public static class Kata
+    public class Parentheses
     {
-        public static List<string> Anagrams(string word, List<string> words)
+        public static bool ValidParentheses(string input)
         {
-            return words.Where(x => x.OrderBy(y => y).SequenceEqual(word.OrderBy(y => y))).ToList();
+            //Console.WriteLine(input);
+            var filteredInput = input.Where(x => x == '(' || x == ')').ToList();
+
+            if (!filteredInput.Any()
+                || filteredInput.Count(x => x == '(') != filteredInput.Count(x => x == ')'))
+            {
+                return false;
+            }
+
+            for (int i = 1; i <= filteredInput.Count(); i++)
+            {
+                if (filteredInput.Take(i).Count(x => x == '(') < filteredInput.Take(i).Count(x => x == ')'))
+                    return false;
+            }
+
+            return true;
         }
     }
 }
