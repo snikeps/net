@@ -20,7 +20,9 @@ namespace ConsoleApp
     {
         public static bool ValidParentheses(string input)
         {
-            //Console.WriteLine(input);
+            if (string.IsNullOrEmpty(input))
+                return true;
+
             var filteredInput = input.Where(x => x == '(' || x == ')').ToList();
 
             if (!filteredInput.Any()
