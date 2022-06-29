@@ -9,7 +9,6 @@ namespace Tests
         [Test]
         public void SampleTest1()
         {
-            Assert.AreEqual(true, Parentheses.ValidParentheses("()"));
         }
     }
 }
