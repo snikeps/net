@@ -4,11 +4,11 @@ using System.Linq;
 
 namespace ConsoleApp
 {
-    public class PagnationHelper<T>
+    public class PaginationHelper<T>
     {
         private IList<T> _collection;
         private int _itemsPerPage;
-        public PagnationHelper(IList<T> collection, int itemsPerPage)
+        public PaginationHelper(IList<T> collection, int itemsPerPage)
         {
             _collection = collection;
             _itemsPerPage = itemsPerPage;

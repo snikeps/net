@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp", "ConsoleApp\Co
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeWars", "CodeWars\CodeWars.csproj", "{68BAC1C3-77D0-4F3E-BD92-88EFF810A081}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{355309C0-83B3-4CC8-8467-3856594B8050}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Tests\Tests.csproj", "{355309C0-83B3-4CC8-8467-3856594B8050}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestsLib", "TestsLib\TestsLib.csproj", "{8FA4A3B2-3C7C-4EDC-8A94-C62E49551535}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{355309C0-83B3-4CC8-8467-3856594B8050}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{355309C0-83B3-4CC8-8467-3856594B8050}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{355309C0-83B3-4CC8-8467-3856594B8050}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FA4A3B2-3C7C-4EDC-8A94-C62E49551535}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FA4A3B2-3C7C-4EDC-8A94-C62E49551535}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FA4A3B2-3C7C-4EDC-8A94-C62E49551535}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FA4A3B2-3C7C-4EDC-8A94-C62E49551535}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
