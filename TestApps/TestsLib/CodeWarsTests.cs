@@ -8,19 +8,15 @@ namespace TestsLib
     public class CodeWarsTests
     {
         [Test]
-        public void CheckPagination()
+        public void NullTest()
         {
-            var ph = new PaginationHelper<char>(new List<char> { 'a', 'b', 'c', 'd', 'e', 'f' }, 4);
-            Assert.AreEqual(ph.PageCount, 2);
-            Assert.AreEqual(ph.ItemCount, 6);
-            Assert.AreEqual(ph.PageItemCount(0), 4);
-            Assert.AreEqual(ph.PageItemCount(1), 2);
-            Assert.AreEqual(ph.PageItemCount(2), -1);
-            Assert.AreEqual(ph.PageIndex(5), 1);
-            Assert.AreEqual(ph.PageIndex(2), 0);
-            Assert.AreEqual(ph.PageIndex(20), -1);
-            Assert.AreEqual(ph.PageIndex(-10), -1);
+            Assert.AreEqual(new List<int>(), Kata.TreeByLevels(null));
         }
 
+        [Test]
+        public void BasicTest()
+        {
+            Assert.AreEqual(new List<int>() { 1, 2, 3, 4, 5, 6 }, Kata.TreeByLevels(new Node(new Node(null, new Node(null, null, 4), 2), new Node(new Node(null, null, 5), new Node(null, null, 6), 3), 1)));
+        }
     }
 }

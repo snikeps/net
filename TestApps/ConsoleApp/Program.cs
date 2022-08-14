@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reactive.Linq;
-using System.Threading;
-using System.Threading.Tasks;
+﻿using Patterns.Builder;
 
 namespace ConsoleApp
 {
@@ -11,18 +6,13 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            var output = TestClass.ReactiveStringOutput("asdsa");
-            output.Subscribe(x => Console.WriteLine(x));
+            var burgerBuilder = new BurgerBuilder()
+                .AddChicken()
+                .AddCheese()
+                .AddSalad()
+                .AddBread();
+
+            System.Console.WriteLine(burgerBuilder.GetBurger());
         }
-    }
-
-    public class TestClass
-    {
-
-        public static IObservable<string> ReactiveStringOutput(string message)
-        {
-            return Observable.Return(message);
-        }
-
     }
 }
