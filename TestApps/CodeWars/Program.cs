@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ConsoleApp
 {
@@ -7,16 +8,35 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            var helper = new PaginationHelper<char>(new List<char> { 'a', 'b', 'c', 'd', 'e', 'f' }, 4);
-            Console.WriteLine($"PageCount = {helper.PageCount}");
-            Console.WriteLine($"ItemCount = {helper.ItemCount}");
-            Console.WriteLine($"PageItemCount(0) = {helper.PageItemCount(0)}");
-            Console.WriteLine($"PageItemCount(1) = {helper.PageItemCount(1)}");
-            Console.WriteLine($"PageItemCount(2) = {helper.PageItemCount(2)}");
-            Console.WriteLine($"PageIndex(5) = {helper.PageIndex(5)}");
-            Console.WriteLine($"PageIndex(2) = {helper.PageIndex(2)}");
-            Console.WriteLine($"PageIndex(20) = {helper.PageIndex(20)}");
-            Console.WriteLine($"PageIndex(-10) = {helper.PageIndex(-10)}");
+            var res = Kata.TreeByLevels(new Node(new Node(null, new Node(null, null, 4), 2), new Node(new Node(null, null, 5), new Node(null, null, 6), 3), 1));
+
+            Console.WriteLine(String.Join(", ", res));
+        }
+    }
+
+    public class Kata
+    {
+        public static List<int> TreeByLevels(Node node)
+        {
+            if (node == null)
+                return new List<int>();
+
+            var level = new List<Node?>() { node };
+
+            AddLevel(node, ref level);
+
+            return level.Where(n => n != null).Select(x => x.Value).ToList();
+        }
+
+        private static void AddLevel(Node node, ref List<Node> level)
+        {
+            level.Add(node.Left);
+            level.Add(node.Right);
+
+            if (node.Left != null)
+                AddLevel(node.Left, ref level);
+            if (node.Right != null)
+                AddLevel(node.Right, ref level);
         }
     }
 }
