@@ -1,6 +1,8 @@
 ﻿using FitnessClub.Domain;
 using FitnessClub.Factories;
 
+// Factory design pattern
+
 class Program
 {
     static void Main()
@@ -27,7 +29,7 @@ class Program
         Console.ReadLine();
     }
 
-    private static MembershipFactory GetFactory(string membershipType) =>
+    private static MembershipFactory? GetFactory(string membershipType) =>
         membershipType.ToLower() switch
         {
             "g" => new GymMembershipFactory(100, "Basic membership"),

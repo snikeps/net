@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace LeetCode
 {
@@ -6,27 +7,23 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            int[] nums = { 2, 7, 11, 15 };
-            int target = 9;
-
-            Console.WriteLine(String.Join(", ", new Solution().TwoSum(nums, target)));
+            Console.WriteLine(new Solution().IsPowerOfThree(27));
         }
     }
 
     public class Solution
     {
-        public int[] TwoSum(int[] nums, int target)
+        public bool IsPowerOfThree(int n)
         {
-            for (int i = 0; i < nums.Length; i++)
-            {
-                for (int j = i + 1; j < nums.Length; j++)
-                {
-                    if (nums[i] + nums[j] == target)
-                        return new int[] { i, j };
-                }
-            }
+            if (n == 3)
+                return true;
 
-            return null;
+            var t = n.ToString().Sum(x => Convert.ToSByte(x) - 48);
+
+            if (n.ToString().Sum(x => Convert.ToSByte(x) - 48) % 9 == 0)
+                return true;
+
+            return false;
         }
     }
 }
