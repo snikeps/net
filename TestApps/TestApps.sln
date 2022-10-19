@@ -12,8 +12,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp", "ConsoleApp\Co
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeWars", "CodeWars\CodeWars.csproj", "{68BAC1C3-77D0-4F3E-BD92-88EFF810A081}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestsLib", "TestsLib\TestsLib.csproj", "{8FA4A3B2-3C7C-4EDC-8A94-C62E49551535}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Design Patterns", "Design Patterns", "{1F685236-E7CC-4C48-9CBA-D5A4B720DCDD}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Patterns", "Patterns\Patterns.csproj", "{10A6077F-608C-490F-9036-A582B9076338}"
@@ -22,7 +20,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeetCode", "LeetCode\LeetCo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FitnessClub", "FitnessClub\FitnessClub.csproj", "{0A49A84A-C75D-4157-B55F-41377125C205}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Attacker", "Attacker\Attacker.csproj", "{191D5AD3-FBAD-4685-9E5D-D7B376BA9AB0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Attacker", "Attacker\Attacker.csproj", "{191D5AD3-FBAD-4685-9E5D-D7B376BA9AB0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestProject.Tests", "TestProject.Tests\TestProject.Tests.csproj", "{5DFF8AA5-79AB-41E5-9C36-C8F29CA24A80}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,10 +42,6 @@ Global
 		{68BAC1C3-77D0-4F3E-BD92-88EFF810A081}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68BAC1C3-77D0-4F3E-BD92-88EFF810A081}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68BAC1C3-77D0-4F3E-BD92-88EFF810A081}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8FA4A3B2-3C7C-4EDC-8A94-C62E49551535}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8FA4A3B2-3C7C-4EDC-8A94-C62E49551535}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8FA4A3B2-3C7C-4EDC-8A94-C62E49551535}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8FA4A3B2-3C7C-4EDC-8A94-C62E49551535}.Release|Any CPU.Build.0 = Release|Any CPU
 		{10A6077F-608C-490F-9036-A582B9076338}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{10A6077F-608C-490F-9036-A582B9076338}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10A6077F-608C-490F-9036-A582B9076338}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -62,6 +58,10 @@ Global
 		{191D5AD3-FBAD-4685-9E5D-D7B376BA9AB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{191D5AD3-FBAD-4685-9E5D-D7B376BA9AB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{191D5AD3-FBAD-4685-9E5D-D7B376BA9AB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DFF8AA5-79AB-41E5-9C36-C8F29CA24A80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DFF8AA5-79AB-41E5-9C36-C8F29CA24A80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DFF8AA5-79AB-41E5-9C36-C8F29CA24A80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DFF8AA5-79AB-41E5-9C36-C8F29CA24A80}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

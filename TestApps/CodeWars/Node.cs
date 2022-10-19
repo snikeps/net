@@ -1,4 +1,4 @@
-﻿namespace ConsoleApp
+﻿namespace CodeWars
 {
     public class Node
     {

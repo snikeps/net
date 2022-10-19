@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ConsoleApp
+namespace CodeWars
 {
     internal class Program
     {
@@ -14,8 +14,10 @@ namespace ConsoleApp
         }
     }
 
-    public class Kata
+    public static class Kata
     {
+        private static List<Node> _temp = new List<Node>();
+
         public static List<int> TreeByLevels(Node node)
         {
             if (node == null)
@@ -28,15 +30,31 @@ namespace ConsoleApp
             return level.Where(n => n != null).Select(x => x.Value).ToList();
         }
 
+
+        private static List<Node> GetChildrenNodes(Node? node)
+        {
+            if (node is null)
+                return new List<Node>();
+
+            List<Node> nodes = new List<Node>();
+            nodes.Add(node.Left);
+            nodes.Add(node.Right);
+            return nodes;
+        }
+
         private static void AddLevel(Node node, ref List<Node> level)
         {
+            //_temp.Clear();
+            
             level.Add(node.Left);
             level.Add(node.Right);
 
-            if (node.Left != null)
-                AddLevel(node.Left, ref level);
-            if (node.Right != null)
-                AddLevel(node.Right, ref level);
+            //foreach (var leftNode in )
+
+            //if (node.Left != null)
+            //    AddLevel(node.Left, ref level);
+            //if (node.Right != null)
+            //    AddLevel(node.Right, ref level);
         }
     }
 }
