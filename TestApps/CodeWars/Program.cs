@@ -36,7 +36,7 @@ namespace CodeWars
             if (node is null)
                 return new List<Node>();
 
-            List<Node> nodes = new List<Node>();
+            var nodes = new List<Node>();
             nodes.Add(node.Left);
             nodes.Add(node.Right);
             return nodes;
